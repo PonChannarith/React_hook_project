@@ -3,7 +3,7 @@ import ProductDetailCard from "../../Components/common/cards/ProductDetailCard";
 import { useLocation } from "react-router-dom";
 // import { useLocation } from "react-router-dom";
 
-export function ProductDetails() {
+export default function ProductDetails() {
   const location = useLocation();
   const product = location.state;
   console.log("location: " + location.state);

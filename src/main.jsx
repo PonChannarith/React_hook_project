@@ -1,13 +1,15 @@
+
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+import App from "./App";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Products from "./page/products/Products.jsx";
-import AboutUs from "./page/about-us/AboutUs.jsx";
-import Layout from "./Components/layout/Layout.jsx";
-import { ProductDetails } from "./page/product-details/ProductDetails.jsx";
-import ErrorPage from "./Components/ErrorPage.jsx";
+import Products from "./page/products/Products";
+import AboutUs from "./page/about-us/AboutUs";
+import Layout from "./Components/layout/Layout";
+import ProductDetails from "./page/product-details/ProductDetails";
+import ErrorPage from "./Components/ErrorPage";
+import Register from "./page/auth/register/Register"; // Ensure this path is correct
 
 const router = createBrowserRouter([
   {
@@ -33,14 +35,10 @@ const router = createBrowserRouter([
       },
     ],
   },
-  // {
-  //   path: "/products",
-  //   element: <Products />
-  // },
-  // {
-  //   path: "/about-us",
-  //   element: <AboutUs />
-  // }
+  {
+    path: "/register",
+    element: <Register />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
